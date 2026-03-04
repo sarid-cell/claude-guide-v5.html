@@ -69,9 +69,9 @@ button{border:none;background:none;font-family:var(--fb);cursor:none}
 .skip-nav{position:fixed;top:-40px;right:0;background:var(--ink);color:var(--pure);padding:8px 16px;font-size:13px;border-radius:0 0 0 8px;z-index:6000;transition:top 0.2s}
 .skip-nav:focus{top:0}
 
-/* ══════════ NAVBAR ══════════ */
-#nav{position:fixed;top:0;left:0;right:0;z-index:3000;padding:0 24px;transition:background 0.3s,box-shadow 0.3s}
-#nav.scrolled{background:rgba(249,248,246,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+/* ══════════ NAVBAR — FIX: always-on background + higher z-index ══════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:4000;padding:0 24px;background:rgba(249,248,246,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background 0.3s,box-shadow 0.3s}
+#nav.scrolled{background:rgba(249,248,246,0.97);box-shadow:0 1px 0 rgba(0,0,0,0.06)}
 .nav-inner{max-width:1060px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{font-family:var(--ff);font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
 .nav-dot{width:7px;height:7px;background:var(--amber);border-radius:50%;animation:pulse 2s ease infinite}
@@ -119,7 +119,6 @@ h1.hero-h1 em{font-style:normal;color:var(--amber);display:inline}
 .btn-ghost{color:var(--ink-2);border:1.5px solid var(--sand-2);padding:13px 20px;border-radius:9px;font-size:15px;font-weight:600;transition:all 0.2s}
 .btn-ghost:hover{border-color:var(--ink-3);background:var(--sand)}
 .hero-note{margin-top:16px;font-family:var(--fm);font-size:11px;color:var(--ink-4);display:flex;align-items:center;gap:6px}
-/* Hero right — illustration */
 .hero-right{opacity:0;animation:heroR 0.8s 2.6s var(--ease) forwards;position:relative}
 @keyframes heroR{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
 .hero-illu{width:100%;aspect-ratio:1;position:relative;display:flex;align-items:center;justify-content:center}
@@ -136,11 +135,11 @@ p.ss{font-size:15px;color:var(--ink-3);line-height:1.8;max-width:500px}
 .rv{opacity:0;transform:translateY(18px);transition:opacity 0.55s var(--ease),transform 0.55s var(--ease)}
 .rv.vis{opacity:1;transform:none}
 
-/* ══════════ ADHD FOCUS STRIP ══════════ */
-.focus-strip{background:var(--amber);padding:12px 24px;text-align:center;font-family:var(--fm);font-size:12px;color:var(--pure);letter-spacing:0.3px;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:0}
+/* ══════════ ADHD FOCUS STRIP — FIX: margin-top to clear fixed nav ══════════ */
+.focus-strip{background:var(--amber);padding:12px 24px;text-align:center;font-family:var(--fm);font-size:12px;color:var(--pure);letter-spacing:0.3px;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:60px}
 .focus-strip a{color:var(--pure);text-decoration:underline;text-underline-offset:3px}
 
-/* ══════════ WHY START — numbered beats ══════════ */
+/* ══════════ WHY START ══════════ */
 #why{background:var(--sand);border-top:1px solid var(--sand-2)}
 .why-beats{display:flex;flex-direction:column;gap:0;margin-top:48px;border:1px solid var(--sand-2);border-radius:16px;overflow:hidden;background:var(--pure)}
 .beat{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:start;padding:28px 28px;border-bottom:1px solid var(--sand);transition:background 0.15s}
@@ -166,7 +165,7 @@ p.ss{font-size:15px;color:var(--ink-3);line-height:1.8;max-width:500px}
 .step-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--amber);border:1px solid rgba(212,105,30,0.2);padding:6px 12px;border-radius:5px;background:var(--amber-l);transition:all 0.15s}
 .step-link:hover{background:var(--amber);color:var(--pure)}
 
-/* ══════════ GUIDE CHAPTERS (accordion) ══════════ */
+/* ══════════ GUIDE CHAPTERS ══════════ */
 #guide{background:var(--sand)}
 .guide-accordion{margin-top:44px;display:flex;flex-direction:column;gap:10px}
 .gc{background:var(--pure);border:1px solid var(--sand-2);border-radius:13px;overflow:hidden;transition:border-color 0.2s,box-shadow 0.2s}
@@ -187,7 +186,6 @@ p.ss{font-size:15px;color:var(--ink-3);line-height:1.8;max-width:500px}
 .gc-body{display:none;padding:0 22px 24px;border-top:1px solid var(--sand)}
 .gc.active .gc-body{display:block;animation:gcIn 0.25s var(--ease)}
 @keyframes gcIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
-/* Chapter content */
 .gc-body h4{font-family:var(--ff);font-size:14px;font-weight:800;color:var(--ink);margin:20px 0 8px;letter-spacing:-0.2px}
 .gc-body h4:first-child{margin-top:20px}
 .gc-body p{font-size:14px;color:var(--ink-3);line-height:1.8;margin-bottom:10px}
@@ -223,7 +221,7 @@ p.ss{font-size:15px;color:var(--ink-3);line-height:1.8;max-width:500px}
 .res-card:hover{border-color:var(--ink-3);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.06)}
 .res-icon{width:36px;height:36px;background:var(--sand);border-radius:8px;display:flex;align-items:center;justify-content:center}
 .res-icon svg{width:15px;height:15px;stroke:var(--ink-3);fill:none;stroke-width:1.8;stroke-linecap:round}
-.res-title{font-family:var(--ff);font-size:14px;font-weight:800;letter---letter-spacing:-0.2px;color:var(--ink)}
+.res-title{font-family:var(--ff);font-size:14px;font-weight:800;letter-spacing:-0.2px;color:var(--ink)}
 .res-desc{font-family:var(--fm);font-size:11px;color:var(--ink-4);line-height:1.55;flex:1}
 .res-link{font-family:var(--fm);font-size:11px;font-weight:700;color:var(--amber);display:flex;align-items:center;gap:4px;transition:gap 0.15s}
 .res-link:hover{gap:7px}
@@ -353,36 +351,30 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
     </div>
     <div class="hero-right">
       <div class="hero-illu">
-        <!-- SVG Illustration: abstract brain/network -->
         <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="180" cy="180" r="120" stroke="#e8e3db" stroke-width="1"/>
           <circle cx="180" cy="180" r="80" stroke="#e8e3db" stroke-width="1"/>
           <circle cx="180" cy="180" r="40" stroke="#e8e3db" stroke-width="1"/>
-          <!-- Nodes -->
           <circle cx="180" cy="60" r="8" fill="#1a1714" opacity="0.9"/>
           <circle cx="285" cy="120" r="6" fill="#1a1714" opacity="0.7"/>
           <circle cx="285" cy="240" r="6" fill="#1a1714" opacity="0.7"/>
           <circle cx="180" cy="300" r="8" fill="#1a1714" opacity="0.9"/>
           <circle cx="75" cy="240" r="6" fill="#1a1714" opacity="0.7"/>
           <circle cx="75" cy="120" r="6" fill="#1a1714" opacity="0.7"/>
-          <!-- Center -->
           <circle cx="180" cy="180" r="14" fill="#d4691e"/>
           <circle cx="180" cy="180" r="6" fill="white"/>
-          <!-- Lines -->
           <line x1="180" y1="68" x2="180" y2="166" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
           <line x1="280" y1="125" x2="192" y2="173" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
           <line x1="280" y1="235" x2="192" y2="187" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
           <line x1="180" y1="292" x2="180" y2="194" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
           <line x1="80" y1="235" x2="168" y2="187" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
           <line x1="80" y1="125" x2="168" y2="173" stroke="#1a1714" stroke-width="1" opacity="0.15"/>
-          <!-- Labels -->
           <text x="180" y="52" text-anchor="middle" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Projects</text>
           <text x="305" y="117" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Code</text>
           <text x="296" y="247" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Agents</text>
           <text x="160" y="316" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Prompts</text>
           <text x="28" y="247" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Docs</text>
           <text x="18" y="117" font-family="'Space Mono'" font-size="9" fill="#9e9a96">Security</text>
-          <!-- Animated pulse rings -->
           <circle cx="180" cy="180" r="20" stroke="#d4691e" stroke-width="1" opacity="0.3">
             <animate attributeName="r" values="20;50;20" dur="3s" repeatCount="indefinite"/>
             <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
@@ -486,7 +478,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
     <p class="ss rv">לחצי על פרק שמעניין אותך. הכל נפתח כאן — לא עוזבים את הדף.</p>
     <div class="guide-accordion rv" style="transition-delay:.1s">
 
-      <!-- PLANS -->
       <div class="gc" id="gc-plans">
         <div class="gc-head clickable" onclick="tog('gc-plans')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
@@ -508,7 +499,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
         </div>
       </div>
 
-      <!-- FEATURES -->
       <div class="gc" id="gc-feat">
         <div class="gc-head clickable" onclick="tog('gc-feat')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
@@ -531,7 +521,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
         </div>
       </div>
 
-      <!-- PROMPTS GUIDE -->
       <div class="gc" id="gc-prom">
         <div class="gc-head clickable" onclick="tog('gc-prom')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
@@ -569,7 +558,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
         </div>
       </div>
 
-      <!-- WEBSITES -->
       <div class="gc" id="gc-web">
         <div class="gc-head clickable" onclick="tog('gc-web')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
@@ -607,7 +595,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
         </div>
       </div>
 
-      <!-- AGENTS -->
       <div class="gc" id="gc-ag">
         <div class="gc-head clickable" onclick="tog('gc-ag')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
@@ -627,7 +614,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.06);padding
         </div>
       </div>
 
-      <!-- CLAUDE CODE -->
       <div class="gc" id="gc-code">
         <div class="gc-head clickable" onclick="tog('gc-code')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
@@ -655,7 +641,6 @@ claude</div>
         </div>
       </div>
 
-      <!-- SECURITY -->
       <div class="gc" id="gc-sec">
         <div class="gc-head clickable" onclick="tog('gc-sec')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -682,7 +667,6 @@ claude</div>
         </div>
       </div>
 
-      <!-- SECRETS -->
       <div class="gc" id="gc-sec2">
         <div class="gc-head clickable" onclick="tog('gc-sec2')">
           <div class="gc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg></div>
@@ -806,14 +790,14 @@ claude</div>
     <div class="follow-label">// updates.subscribe()</div>
     <h2 class="follow-h">רוצה לדעת כשמשהו<br>חדש מתגלה?</h2>
     <p class="follow-sub">עוקבת אחרי — מקבלת פרומפט חדש כל שבוע,<br>גילויים מהשדה, וטיפים ישירות מהניסיון שלי.</p>
-  <a class="follow-btn" href="https://www.instagram.com/shira.sarid?igsh=aXgxY25nNDJodWZi&utm_source=qr" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+    <a class="follow-btn" href="https://www.instagram.com/shira.sarid?igsh=aXgxY25nNDJodWZi&utm_source=qr" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-    עקבי אחריי לעוד תובנות — @shira.sarid
-</a>
+      </svg>
+      עקבי אחריי לעוד תובנות — @shira.sarid
+    </a>
     <div class="follow-note">// ללא ספאם · ביטול בכל זמן</div>
   </div>
 </div>
@@ -838,7 +822,7 @@ window.addEventListener('load',()=>{
   },2500);
 });
 
-/* ── CURSOR (fast & light) ── */
+/* ── CURSOR ── */
 const cd=document.getElementById('cd'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
@@ -854,7 +838,6 @@ window.addEventListener('scroll',()=>{
   document.getElementById('pfill').style.width=(s/h*100)+'%';
   const nav=document.getElementById('nav');
   nav.classList.toggle('scrolled',s>30);
-  // update active nav
   const secs=['why','start','guide','prompts','resources'];
   let cur='';
   secs.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=120)cur=id});
@@ -910,13 +893,14 @@ function pcopy(card,text){
   });
 }
 </script>
-   <!-- Google tag (gtag.js) -->
-           <script async src="https://www.googletagmanager.com/gtag/js?id=G-1300DQCQ08"></script>
-           <script>
-             window.dataLayer = window.dataLayer || [];
-             function gtag(){dataLayer.push(arguments);}
-             gtag('js', new Date());
-             gtag('config', 'G-1300DQCQ08');
-           </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1300DQCQ08"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1300DQCQ08');
+</script>
 </body>
 </html>
