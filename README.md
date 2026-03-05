@@ -10,10 +10,10 @@
 ---
 
 ## 🏗️ The Vision
-**"Building digital bridges between logic and creativity."** המדריך הזה נולד מתוך הניסיון שלי כארכיטקטית דיגיטלית (וכמישהי ששילמה "שכר לימוד" של $173 בטוקנים 😉) [cite: 2025-12-23]. המטרה היא להראות איך אפשר לבנות מערכות מורכבות, ארכיטקטורות פרומפטים ואפליקציות מלאות בעזרת **Claude Code** — גם ללא רקע בתכנות [cite: 2026-03-05].
+**"Building digital bridges between logic and creativity."** המדריך הזה נולד מתוך הניסיון שלי כארכיטקטית דיגיטלית (וכמישהי ששילמה "שכר לימוד" של $173 בטוקנים 😉) [. המטרה היא להראות איך אפשר לבנות מערכות מורכבות, ארכיטקטורות פרומפטים ואפליקציות מלאות בעזרת **Claude Code** — גם ללא רקע בתכנות.
 
 > [!TIP]
-> **Check out the Live Interactive Guide:** [claude-guide-v5-html.vercel.app](https://claude-guide-v5-html.vercel.app) [cite: 2026-03-05]
+> **Check out the Live Interactive Guide:** [claude-guide-v5-html.vercel.app](https://claude-guide-v5-html.vercel.app) 
 
 ---
 
@@ -27,25 +27,25 @@
 
 ### 3. 📚 The "Claude x Shira" Guide
 מאגר ידע חי בעברית ובאנגלית הכולל:
-- השוואת מנויים (Pro vs Max) [cite: 2026-03-05].
-- תבניות פרומפטים מוכנות (XML Tags, ביקורת עצמית) [cite: 2026-03-05].
-- מדריכי "סוכנים" ו-Cowork [cite: 2026-03-05].
+- השוואת מנויים (Pro vs Max).
+- תבניות פרומפטים מוכנות (XML Tags, ביקורת עצמית).
+- מדריכי "סוכנים" ו-Cowork .
 
 ---
 
 ## 🛠️ Tech Stack & Methodology
-- **AI Model:** Claude 3.5 Sonnet (Extended Thinking) [cite: 2026-03-05]
+- **AI Model:** Claude 3.5 Sonnet (Extended Thinking) 
 - **Environment:** Claude Code CLI
-- **Architecture:** Multi-layered Prompt Engineering [cite: 2026-03-05]
-- **Hosting:** Vercel [cite: 2026-03-05]
+- **Architecture:** Multi-layered Prompt Engineering
+- **Hosting:** Vercel 
 
 ---
 
 ## 📈 Roadmap & Milestones
-- [x] Launching the Interactive HTML Guide [cite: 2026-03-05]
+- [x] Launching the Interactive HTML Guide 
 - [x] Initial release of **ECHO.11** Logic
 - [ ] Viberank Leaderboard Submission (Target: March 6th)
-- [ ] Optimizing "Prompt Weight" for large-scale projects [cite: 2026-03-05]
+- [ ] Optimizing "Prompt Weight" for large-scale projects
 
 ---
 
